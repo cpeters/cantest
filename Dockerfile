@@ -1,6 +1,7 @@
 # FROM nodejs-10:latest AS build
 # FROM registry.access.redhat.com/ubi8/nodejs-10:latest AS build
-FROM registry.redhat.io/ubi8/nodejs-10:latest AS build
+# FROM registry.redhat.io/ubi8/nodejs-10:latest AS build
+FROM openshift/nodejs-10:latest AS build
 
 ARG APP_ENV=production
 
@@ -17,7 +18,8 @@ RUN yarn build:$APP_ENV --no-progress --no-colors
 # Only copy over build files for a lightweight image
 # FROM nodejs-10:latest
 # FROM registry.access.redhat.com/ubi8/nodejs-10:latest
-FROM registry.redhat.io/ubi8/nodejs-10:latest
+# FROM registry.redhat.io/ubi8/nodejs-10:latest
+FROM openshift/nodejs-10:latest
 
 WORKDIR /app
 
