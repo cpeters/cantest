@@ -1,6 +1,6 @@
 # FROM nodejs-10:latest AS build
 # FROM registry.access.redhat.com/ubi8/nodejs-10:latest AS build
-FROM registry.redhat.io/ubi8/nodejs-10:latest AS build
+#FROM registry.redhat.io/ubi8/nodejs-10:latest AS build
 # FROM openshift/nodejs-10:latest AS build
 # FROM image-registry.openshift-image-registry.svc:5000/openshift/nodejs-10 AS build
 FROM registry.access.redhat.com/ubi7/nodejs-8
